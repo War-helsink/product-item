@@ -1,3 +1,4 @@
+export * from "./breadcrumb";
 export * from "./button";
 export * from "./carousel";
 export * from "./container";
@@ -8,4 +9,5 @@ export * from "./logo-square";
 export * from "./price";
 export * from "./prose";
 export * from "./sheet";
+export * from "./tabs";
 export * from "./title";

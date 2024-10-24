@@ -91,34 +91,32 @@ export const Gallery: React.FC<{
 				</div>
 			</Carousel>
 
-			{images.length > 1 && (
-				<ul className="my-12 flex items-center justify-center gap-2 overflow-auto py-1 lg:mb-0">
-					{images.map((image, index) => {
-						const isActive = index === imageIndex;
+			<ul className="my-12 flex items-center justify-center gap-2 py-1 lg:mb-0">
+				{images.map((image, index) => {
+					const isActive = index === imageIndex;
 
-						return (
-							<li key={image.src} className="h-20 w-20">
-								<button
-									type="button"
-									className="h-full w-full"
-									onClick={() => {
-										api?.scrollTo(index);
-										setImageIndex(index);
-									}}
-								>
-									<GridImage
-										alt={image.alt}
-										src={image.src}
-										width={80}
-										height={80}
-										active={isActive}
-									/>
-								</button>
-							</li>
-						);
-					})}
-				</ul>
-			)}
+					return (
+						<li key={image.src} className="h-20 w-20">
+							<button
+								type="button"
+								className="h-full w-full"
+								onClick={() => {
+									api?.scrollTo(index);
+									setImageIndex(index);
+								}}
+							>
+								<GridImage
+									alt={image.alt}
+									src={image.src}
+									width={80}
+									height={80}
+									active={isActive}
+								/>
+							</button>
+						</li>
+					);
+				})}
+			</ul>
 		</>
 	);
 };

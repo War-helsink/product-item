@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
 				<div className="mx-auto flex flex-col items-center gap-1 justify-center w-full max-w-7xl px-4 md:flex-row md:gap-0 md:px-4">
 					<p>
 						&copy; {currentYear} {copyrightName}
-						{copyrightName.length && !copyrightName.endsWith(".") ? "." : ""}{" "}
+						{". "}
 						All rights reserved.
 					</p>
 					<hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
