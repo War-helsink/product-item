@@ -43,7 +43,7 @@ export const Gallery: React.FC<{
 			>
 				<CarouselContent className="h-full w-full">
 					{images.length > 1 &&
-						images.map((image, index) => {
+						images.map((image) => {
 							return (
 								<CarouselItem key={image.src} className="relative">
 									<Image
