@@ -68,10 +68,12 @@ export const ProductForm: React.FC = () => {
 				</TabsContent>
 				<TabsContent value="characteristics">
 					<div className="flex flex-col rounded-lg border border-neutral-200 bg-white p-8 md:p-12 lg:flex-row lg:gap-8 dark:border-neutral-800 dark:bg-black">
-						<div className="h-full w-full basis-full lg:basis-4/6 mb-12 lg:mb-0">
-							<h1 className="text-xl font-medium mb-4">{`${PRODUCT.name} (${PRODUCT.id})`}</h1>
-							<Characteristics characteristics={PRODUCT.characteristics} />
-						</div>
+						<Characteristics
+							id={PRODUCT.id}
+							name={PRODUCT.name}
+							characteristics={PRODUCT.characteristics}
+							className="basis-full lg:basis-4/6 mb-12 lg:mb-0"
+						/>
 						<div className="basis-full lg:basis-2/6">
 							<Suspense fallback={null}>
 								<ProductDescription
@@ -85,11 +87,12 @@ export const ProductForm: React.FC = () => {
 				</TabsContent>
 				<TabsContent value="reviews">
 					<div className="flex flex-col rounded-lg border border-neutral-200 bg-white p-8 md:p-12 lg:flex-row lg:gap-8 dark:border-neutral-800 dark:bg-black">
-						<div className="h-full w-full basis-full lg:basis-4/6 mb-12 lg:mb-0">
-							<h1 className="text-xl font-medium mb-4">Reviews</h1>
-							<Reviews reviews={PRODUCT.reviews} />
-						</div>
-						<div className="hidden basis-2/6 lg:block">
+						<Reviews
+							reviews={PRODUCT.reviews}
+							className="basis-full lg:basis-4/6 mb-12 lg:mb-0"
+						/>
+
+						<div className="basis-full lg:basis-2/6">
 							<Suspense fallback={null}>
 								<ProductDescription
 									product={PRODUCT}

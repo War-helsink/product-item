@@ -1,5 +1,5 @@
-import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "./theme-provider";
+import { Toaster } from "@/components/shared/ui";
 
 export const Providers: React.FC<React.PropsWithChildren> = ({ children }) => {
 	return (
